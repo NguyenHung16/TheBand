@@ -265,6 +265,7 @@ html {
     padding: 11px 16px;
     display: inline-block;
     margin-top: 15px;
+    border: none;
 }
 
 .place-buy-btn:hover {
@@ -294,10 +295,11 @@ html {
 
 .modal-container {
     background-color: #fff;
-    width: 900px;
+    width: 800px;
     min-height: 200px;
     position: relative;
     max-width: calc(100% - 32px);
+    animation: openModal ease 0.5s;
 }
 
 .modal-header {
@@ -308,10 +310,11 @@ html {
     justify-content: center;
     color: #fff;
     font-size: 30px;
+    letter-spacing: 4px;
 }
 
 .heading-icon {
-    margin-right: 16px;
+    margin-right: 12px;
 }
 
 .modal-close  {
@@ -368,4 +371,15 @@ html {
 
 .modal-footer a {
     color: #2196F3;
+}
+
+@keyframes openModal {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
